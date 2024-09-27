@@ -19,16 +19,15 @@ import ForgotPassword from "./pages/forms/ForgotPassword";
 import ResetPassword from "./pages/forms/ResetPassword";
 import NotFound from "./pages/not-found/NotFound";
 // helpers 
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {Routes, Route, Navigate} from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { useSelector } from "react-redux";
-import { HashRouter as Router} from "react-router-dom";
 import VerifyEmail from "./pages/verify-email/VerifyEmail";
 
 function App() {
   const { user } = useSelector((state) => state.auth);
   return (
-    <Router basename="/blog-app">
+    <>
         <ToastContainer theme="colored" position="top-center"/>
         <Header />
         <Routes>
@@ -55,7 +54,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-    </Router>
+    </>
   );
 }
 
