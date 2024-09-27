@@ -29,7 +29,6 @@ function App() {
   const { user } = useSelector((state) => state.auth);
   return (
     <Router basename="/blog-app">
-      <BrowserRouter>
         <ToastContainer theme="colored" position="top-center"/>
         <Header />
         <Routes>
@@ -56,7 +55,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
     </Router>
   );
 }
