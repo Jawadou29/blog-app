@@ -27,7 +27,7 @@ import VerifyEmail from "./pages/verify-email/VerifyEmail";
 function App() {
   const { user } = useSelector((state) => state.auth);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/blog-app">
       <ToastContainer theme="colored" position="top-center"/>
       <Header />
       <Routes>
