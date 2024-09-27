@@ -1,0 +1,104 @@
+.table-container{
+  display: flex;
+  height: calc(100vh - 90px);
+  overflow: hidden;
+  text-transform: capitalize;
+}
+.table-wrapper{
+  flex: 10;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.table-title{
+  font-size: 30px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 3px;
+  width: max-content;
+}
+.table{
+  width: 100%;
+  min-width: 700px;
+  text-align: center;
+  border-collapse: collapse;
+}
+th{
+  background-color: var(--secondary-color);
+  color: white;
+}
+th, td{
+  border: 1px solid var(--gray-color);
+  padding: 10px;
+}
+tr:nth-child(even) {
+  background-color: var(--white-color);
+}
+tr:hover{
+  background-color: #ddd ;
+}
+.table-image{
+  display: flex;
+  align-items: center;
+}
+.table-user-image{
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.table-username{
+  font: 500px;
+  font-size: 17px;
+  margin-left: 5px;
+}
+.table-button-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.table-button-group button{
+  border: none;
+  background-color: var(--green-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.table-button-group button:last-child{
+  background-color: var(--red-color);
+}
+.table-button-group button:first-child:hover{
+  background-color: green;
+}
+.table-button-group button:last-child:hover{
+  background-color: red;
+}
+.table-button-group button a{
+  color: var(--white-color);
+}
+@media (max-width: 720px) {
+  .table-wrapper{
+    padding: 15px;
+  }
+  th, th{
+    padding: 5px;
+  }
+  .table-image{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 520px) {
+  .table-wrapper{
+    padding: 3px;
+  }
+  th, td{
+    padding: 2px;
+  }
+}

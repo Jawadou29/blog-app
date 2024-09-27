@@ -1,0 +1,37 @@
+.pagenation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.pagenation .page{
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--gray-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+.pagenation .page.previous,
+.pagenation .page.next{
+  width: max-content;
+  padding: 0 7px;
+}
+.pagenation .page.previous{
+  border-radius: 10px 0 0 10px;
+}
+.pagenation .page.next{
+  border-radius: 0 10px 10px 0;
+}
+.pagenation .page.active{
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+.pagenation button:disabled{
+  cursor: not-allowed;
+}
